@@ -1,6 +1,6 @@
 var conn = require('../model/config')
 var Cookies = require('../middleware/cookies')
-module.exports.login = (req, res, next)=>{
+userController.login = (req, res, next)=>{
     let error = {
         code : 404,
         messenger: "User not found"
@@ -21,3 +21,10 @@ module.exports.login = (req, res, next)=>{
         return;
     })
 }
+
+userController.logout = (req, res, next)=>{
+    
+
+}
+
+module.exports = userController;

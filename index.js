@@ -7,6 +7,10 @@ app.use(bodyParser.json())
 var cookieParser = require('cookie-parser');
 app.use(cookieParser());
 
+var cookies = require('./middleware/cookies');
+app.use(cookies.checkCookieUser)
+
+
 var userRouter = require('./router/user.router')
 app.use('/user', userRouter)
 
